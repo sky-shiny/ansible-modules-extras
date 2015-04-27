@@ -24,7 +24,7 @@ import os
 DOCUMENTATION =  '''
 ---
 module: os_attach_volume
-version_added: "1.9"
+version_added: "2.0"
 short_description: Attach a volume to an instance
 description:
    - Create and attach a volume to an instance
@@ -34,17 +34,14 @@ options:
     description:
       - login username to authenticate to keystone
     required: true
-    default: admin
   login_password:
     description:
       - Password of login user
     required: true
-    default: 'yes'
   login_tenant_name:
     description:
       - The tenant name of the login user
     required: true
-    default: 'yes'
   auth_url:
     description:
       - The keystone url for authentication
@@ -54,17 +51,14 @@ options:
     description:
       - Name of the region
     required: false
-    default: None
   name:
     description:
       - Name that has to be given to the instance (Volume will inherit the name)
     required: true
-    default: None
   size:
     description:
       - Size of the volume to attach
     required: True
-    default: None
   mountpoint:
     description:
       - Mountpoint to attempt to attach to on the instance
